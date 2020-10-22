@@ -10,7 +10,7 @@
 ### how to make a anaconda environment for noisebudgetter
 - conda-build recipe is here : `/users/yuzu/django-env_20201006.yaml @k1ctr1`
 - `conda env create --file django-env_20201006.yaml -n noiseb`
-- Because the installed gwpy package is very old (v0.15?), update is
+- Because the installed gwpy package is very old (v0.15?), update them
   - `conda install -c conda-forge gwpy`
   - `conda install -c conda-forge ldas-tools-framecpp`
   - `conda install -c conda-forge python-ldas-tools-framecpp`
@@ -20,12 +20,12 @@
 ### how to launch
 - in the case of k1ctr7
 
-  ```
+``` shell
 % ssh k1ctr7
 % conda activate django-env
 % cd /kagra/Dropbox/Personal/Shoda/src/AppTest/
 % nohup python manage.py runserver 0.0.0.0:8000 > nohup.out &
-  ```
+```
 
 ### current task
 - understand the code
