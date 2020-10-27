@@ -30,7 +30,10 @@
 ### current task
 - understand the code
 - summarize the necessary codes on github (https://github.com/gw-vis/noisebudgetter).
+- install Dropbox in the server
 
 ### finished task
 - test the possibility that the tool can move from `k1ctr7` to another computer
-  - yes, it's possible.Because this tool needs to read full data, the tool needs `k1nds2` or cache file system.
+  - yes, it's possible.
+  - note that the tool needs `k1nds2` or cache file system to read full data.
+  - the measured data, such as transfer function, should be stored in Dropbox. 
