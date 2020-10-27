@@ -1,0 +1,17 @@
+save date,2020/03/17 12:16:38
+0,Suspension thermal,None,/kagra/Dropbox/Subsystems/MIF/NoiseBudget/PRFPMI/Noises/displacement_susp300K.txt,None,None,None,None,None,None,None,Somiya-san's Mathematica calculation(300Knew.nb)
+0,Mirror thermal,None,/kagra/Dropbox/Subsystems/MIF/NoiseBudget/PRFPMI/Noises/displacement_mirror300K.txt,None,None,None,None,None,None,None,Somiya-san's Mathematica calculation(300Knew.nb)
+0,Shot,7.4e-20*((1+(freq/22.2)**2)**0.5),None,None,None,None,None,None,None,None,klog #13475
+0,OMC DC PD dark,None,/kagra/Dropbox/Subsystems/MIF/NoiseBudget/PRFPMI/Noises/OMCDCPDdark.txt,None,None,None,None,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,From DARMsens.xml (measured on Feb.11 with 1stage wh.)
+0,Type-A DAC,3.6e-14/freq**2,None,None,None,None,None,None,None,None,klog #13626 (ITMs with 1st DW filter and ETMs without DW filter)
+1,Laser intensity,K1:PSL-ISS_FIRST_SERVO_PDA_RIN_OUT_DQ,None,None,None,None,100;2500,,4.4e-18,klog #13028
+1,Laser frequency,K1:LSC-CARM_RESIDUAL_OUT_DQ,None,None,None,None,,,3e-14,From DARMsens.xml (based on 2020 Feb 14)
+1,MICH coupling,K1:LSC-MICH_IN1_DQ,None,None,None,/kagra/Dropbox/Subsystems/MIF/NoiseBudget/PRFPMI/Couplings/TF_MICH_DARM_200312_mag.txt,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,klog #13518
+1,PRCL coupling,K1:LSC-PRCL_IN1_DQ,None,None,None,/kagra/Dropbox/Subsystems/MIF/NoiseBudget/PRFPMI/Couplings/TF_PRCL_DARM_200312_mag.txt,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,klog #13518
+11,TypeA control,ITMX_MN_PS_DAMP,K1:VIS-ITMX_MN_PSDAMP_L_OUT_DQ,/kagra/Dropbox/Subsystems/VIS/AutoMeasurement/TypeA/ITMX/TF/Measurements/20200312/TF_MNL_DARM.xml,K1:VIS-ITMX_MN_SUMOUT_L_OUT,K1:CAL-CS_PROC_DARM_DISPLACEMENT_DQ,None,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,klog #13590
+11,TypeA control,ITMY_MN_PS_DAMP,K1:VIS-ITMY_MN_PSDAMP_L_OUT_DQ,/kagra/Dropbox/Subsystems/VIS/AutoMeasurement/TypeA/ITMY/TF/Measurements/20200312/TF_MNL_DARM.xml,K1:VIS-ITMY_MN_SUMOUT_L_OUT,K1:CAL-CS_PROC_DARM_DISPLACEMENT_DQ,None,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,klog #13590
+11,TypeA control,ETMY_MN_PS_DAMP,K1:VIS-ETMY_MN_PSDAMP_L_OUT_DQ,/kagra/Dropbox/Subsystems/VIS/AutoMeasurement/TypeA/ETMY/TF/Measurements/20200312/TF_MNL_DARM.xml,K1:VIS-ETMY_MN_SUMOUT_L_OUT,K1:CAL-CS_PROC_DARM_DISPLACEMENT_DQ,None,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,klog #13590
+11,TypeA control,ETMX_MN_PS_DAMP,K1:VIS-ETMX_MN_PSDAMP_L_OUT_DQ,/kagra/Dropbox/Subsystems/VIS/AutoMeasurement/TypeA/ETMX/TF/Measurements/20200312/TF_MNL_DARM1.xml,K1:VIS-ETMX_MN_SUMOUT_L_OUT,K1:CAL-CS_PROC_DARM_DISPLACEMENT_DQ,None,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,klog #13590
+11,BS control,BS TM-Y,K1:VIS-BS_TM_DAMP_Y_OUT_DQ,/kagra/Dropbox/Subsystems/MIF/NoiseBudget/PRFPMI/VIS/BS/TF_BS_TMYexc_DARM_20200311.xml,K1:VIS-BS_TM_SUMOUT_Y_OUT,K1:CAL-CS_PROC_DARM_DISPLACEMENT_DQ,None,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,klog #13587
+11,BS control,BS TM-P,K1:VIS-BS_TM_DAMP_P_OUT_DQ,/kagra/Dropbox/Subsystems/MIF/NoiseBudget/PRFPMI/VIS/BS/TF_BS_TMPexc_DARM_20200311.xml,K1:VIS-BS_TM_SUMOUT_P_OUT,K1:CAL-CS_PROC_DARM_DISPLACEMENT_DQ,None,10.;10.;10.;10.;10.,1.;1.;1.;1.;1.,1.e-14,klog #13587
+99,2020 Mar 9 14:00:00,2020 Mar 9 14:10:00,0.1,10,6000,1e-19,1e-12
