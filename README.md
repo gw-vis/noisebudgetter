@@ -45,11 +45,12 @@
 
 ``` shell
 % conda activate noiseb
+% cd DjangoApp
 % python manage.py runserver 0.0.0.0:8000
 ```
 
 ### current task
-- install Dropbox in the server
+- understand how to install Dropbox on server by KAGRA account
 
 ### finished task
 - test the possibility that the tool can move from `k1ctr7` to another computer
