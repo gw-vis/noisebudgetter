@@ -8,14 +8,15 @@
   - [official document of Django (Japanese)](https://docs.djangoproject.com/ja/2.2/intro/tutorial01/)
 
 ### how to make a anaconda environment for noisebudgetter
-- conda-build recipe is here : `/users/yuzu/django-env_20201006.yaml @k1ctr1`
-- `conda env create --file django-env_20201006.yaml -n noiseb`
+- conda-build recipe is `django-env_20201006.yaml`
+  - This was generated at k1ctr7 : `/users/yuzu/django-env_20201006.yaml @k1ctr1`
+  - `conda env create --file django-env_20201006.yaml -n noiseb`
+- enter virtual environment
+   - `conda activate noiseb`
 - Because the installed gwpy package is very old (v0.15?), update them
   - `conda install -c conda-forge gwpy`
   - `conda install -c conda-forge ldas-tools-framecpp`
   - `conda install -c conda-forge python-ldas-tools-framecpp`
-- enter virtual environment
-   - `conda activate noiseb`
 
 ### AdminLTE
 - Original code used the v2.4.10
