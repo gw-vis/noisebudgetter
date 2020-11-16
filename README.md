@@ -31,6 +31,10 @@
   - `cp -r AdminLTE-2.4.18 DjangoApp/NoiseBudgetter/static/`
   - `cp -r AdminLTE-2.4.18 DjangoApp/static_for_deploy`
 
+#### to prepare database to prevent the warning
+- command memo 
+  - `python manage.py migrate`
+
 ### how to launch
 - on k1ctr7
 
