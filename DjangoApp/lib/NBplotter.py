@@ -21,26 +21,26 @@ import re
 def plot_DARM(start,end,fres,figval=1):
     ch = 'K1:CAL-CS_PROC_DARM_DISPLACEMENT_DQ'
 
-    gps_beg = int(to_gps( start ))
-    gps_end = int(to_gps( end ))
-    gps_beg_head = int(gps_beg/100000)
-    gps_end_head = int(gps_end/100000)
-    if gps_beg_head == gps_end_head:
-        cache_file="/home/devel/cache/Cache_GPS/%s.cache" % gps_beg_head
-    else:
-        # merge two cache file
-        cache1="/home/devel/cache/Cache_GPS/%s.cache" % gps_beg_headelse
-        cache2="/home/devel/cache/Cache_GPS/%s.cache" % gps_end_head
-        cache_file="/var/www/html/past_data_viewer/data/%s_%s.cache" % (gps_beg, gps_end)
+    # gps_beg = int(to_gps( start ))
+    # gps_end = int(to_gps( end ))
+    # gps_beg_head = int(gps_beg/100000)
+    # gps_end_head = int(gps_end/100000)
+    # if gps_beg_head == gps_end_head:
+    #     cache_file="/home/devel/cache/Cache_GPS/%s.cache" % gps_beg_head
+    # else:
+    #     # merge two cache file
+    #     cache1="/home/devel/cache/Cache_GPS/%s.cache" % gps_beg_headelse
+    #     cache2="/home/devel/cache/Cache_GPS/%s.cache" % gps_end_head
+    #     cache_file="/var/www/html/past_data_viewer/data/%s_%s.cache" % (gps_beg, gps_end)
 
-        with open(cache_file, 'w') as outfile:
-            for i in [cache1, cache2]:
-                with open(i) as infile:
-                    outfile.write(infile.read())
+    #     with open(cache_file, 'w') as outfile:
+    #         for i in [cache1, cache2]:
+    #             with open(i) as infile:
+    #                 outfile.write(infile.read())
 
     try:
-        data = TimeSeries.read(cache_file, ch, start=gps_beg, end=gps_end, nproc=4)
-        #data = TimeSeries.get(ch, start, end, host='k1nds2', port=8088)
+        #data = TimeSeries.read(cache_file, ch, start=gps_beg, end=gps_end, nproc=4)
+        data = TimeSeries.get(ch, start, end, host='k1nds2', port=8088)
     except:
         return 1,'DARM data cannot be obtained. Try with more recent data. %d %d' % (gps_beg, gps_end)
     spectrum = data.asd(1./fres,1./fres/2.)
@@ -450,26 +450,26 @@ def plot_singleRTN(conf,start,end,fres,freq_tot,total):
     #print(start, end)
     ch = conf['chan']
 
-    gps_beg = int(to_gps( start ))
-    gps_end = int(to_gps( end ))
-    gps_beg_head = int(gps_beg/100000)
-    gps_end_head = int(gps_end/100000)
-    if gps_beg_head == gps_end_head:
-        cache_file="/home/devel/cache/Cache_GPS/%s.cache" % gps_beg_head
-    else:
-        # merge two cache file
-        cache1="/home/devel/cache/Cache_GPS/%s.cache" % gps_beg_headelse
-        cache2="/home/devel/cache/Cache_GPS/%s.cache" % gps_end_head
-        cache_file="/var/www/html/past_data_viewer/data/%s_%s.cache" % (gps_beg, gps_end)
+    # gps_beg = int(to_gps( start ))
+    # gps_end = int(to_gps( end ))
+    # gps_beg_head = int(gps_beg/100000)
+    # gps_end_head = int(gps_end/100000)
+    # if gps_beg_head == gps_end_head:
+    #     cache_file="/home/devel/cache/Cache_GPS/%s.cache" % gps_beg_head
+    # else:
+    #     # merge two cache file
+    #     cache1="/home/devel/cache/Cache_GPS/%s.cache" % gps_beg_headelse
+    #     cache2="/home/devel/cache/Cache_GPS/%s.cache" % gps_end_head
+    #     cache_file="/var/www/html/past_data_viewer/data/%s_%s.cache" % (gps_beg, gps_end)
 
-        with open(cache_file, 'w') as outfile:
-            for i in [cache1, cache2]:
-                with open(i) as infile:
-                    outfile.write(infile.read())
+    #     with open(cache_file, 'w') as outfile:
+    #         for i in [cache1, cache2]:
+    #             with open(i) as infile:
+    #                 outfile.write(infile.read())
 
     try:
-        data = TimeSeries.read(cache_file, ch, start=gps_beg, end=gps_end, nproc=4)
-        #data = TimeSeries.get(ch, start, end, host='k1nds2', port=8088)
+        #data = TimeSeries.read(cache_file, ch, start=gps_beg, end=gps_end, nproc=4)
+        data = TimeSeries.get(ch, start, end, host='k1nds2', port=8088)
     except:
         return 1, ch+' cannot be loaded.'
     spe = data.asd(1./fres,1./fres/2.)
